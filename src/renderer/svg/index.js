@@ -79,9 +79,9 @@ export default class SvgRenderer {
     const g = group(
       {transform: 'translate(0 10)'},
       sequence({
-        position: {x: 0, y: -2.5},
+        position: {x: 0, y: -5},
         length,
-        height: 5,
+        height: 10,
         color: '#d8d8d8',
       })
     );

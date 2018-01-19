@@ -164,9 +164,9 @@ export default (
   }
   const textElement = textEl(
     {
-      x: ((end - start) * residueWidth) / 2, y: height * 0.75 + 0.5,
+      x: ((end - start) * residueWidth) / 2, y: height * 0.75 - 0.75,
       'text-anchor': 'middle',
-      'font-size': 7.5,
+      'font-size': 5,
       'font-family': 'Sans-Serif',
       fill: textColor || bestContrast(Array.isArray(color) ? color[0] : color),
       opacity: 0,
@@ -179,7 +179,6 @@ export default (
     domain({
       start, end, startStyle, endStyle, residueWidth,
       fill: fill, mask: `url(#${maskId})`,
-      filter: spotlight && `url(#${spotlight})`,
     }),
     text ? textElement : null
   );
